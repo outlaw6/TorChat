@@ -1,3 +1,7 @@
+# News
+## Trying to re-write the old and minimal torchat for Python 3.5 and wx4
+
+
 TorChat2
 ========
 If you are looking for **TorChat 0.9.9.xxx** (the original Python
