@@ -1,5 +1,8 @@
 # News
 ## Trying to re-write the old and minimal torchat for Python 3.5 and wx4
+* Also probably bi-lingual or tri-lingual depending on the capacity
+* Help would be appreciated
+* Also I would like to pack it into an .exe file for portable Windows use
 
 
 TorChat2
