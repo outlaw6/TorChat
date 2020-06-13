@@ -1,0 +1,46 @@
+# Tor state file last generated on 2020-06-12 12:30:26 local time
+# Other times below are in GMT
+# You *do not* need to edit this file.
+
+EntryGuard lpf1 D228AE265C966CA4E9A8C4B746A30A9737060A32
+EntryGuardAddedBy D228AE265C966CA4E9A8C4B746A30A9737060A32 0.2.2.39 2020-06-03 18:31:30
+EntryGuard hers 891FB8477529A6B2894B7A3129402E0FD5DD281F
+EntryGuardAddedBy 891FB8477529A6B2894B7A3129402E0FD5DD281F 0.2.2.39 2020-05-16 09:06:14
+EntryGuard sorrytorrey EAA088440B100FF8407266B5D4853FFB16A8CB67
+EntryGuardAddedBy EAA088440B100FF8407266B5D4853FFB16A8CB67 0.2.2.39 2020-05-25 01:12:37
+EntryGuard TorOrDie4privacyNET C7A016E1F85CF7DD73914AE40F55B7183D11B8FD
+EntryGuardAddedBy C7A016E1F85CF7DD73914AE40F55B7183D11B8FD 0.2.2.39 2020-05-19 03:37:10
+EntryGuard firstor2 9C900A7F6F5DD034CFFD192DAEC9CCAA813DB022
+EntryGuardAddedBy 9C900A7F6F5DD034CFFD192DAEC9CCAA813DB022 0.2.2.39 2020-06-09 02:13:57
+EntryGuard spechttor1 DBE82FA23B9FE3CB2462A6FCF5289DED3CBF4AEE
+EntryGuardAddedBy DBE82FA23B9FE3CB2462A6FCF5289DED3CBF4AEE 0.2.2.39 2020-05-27 03:53:24
+TorVersion Tor 0.2.2.39 (git-bec76476efb71549)
+LastWritten 2020-06-12 10:30:26
+TotalBuildTimes 81
+CircuitBuildTimeBin 175 1
+CircuitBuildTimeBin 225 3
+CircuitBuildTimeBin 275 15
+CircuitBuildTimeBin 325 18
+CircuitBuildTimeBin 375 8
+CircuitBuildTimeBin 425 3
+CircuitBuildTimeBin 475 6
+CircuitBuildTimeBin 525 2
+CircuitBuildTimeBin 575 1
+CircuitBuildTimeBin 625 2
+CircuitBuildTimeBin 675 2
+CircuitBuildTimeBin 725 1
+CircuitBuildTimeBin 775 1
+CircuitBuildTimeBin 825 2
+CircuitBuildTimeBin 875 1
+CircuitBuildTimeBin 1325 1
+CircuitBuildTimeBin 1525 2
+CircuitBuildTimeBin 4125 1
+CircuitBuildTimeBin 12225 1
+CircuitBuildTimeBin 12275 1
+CircuitBuildTimeBin 12525 1
+CircuitBuildTimeBin 14175 1
+CircuitBuildTimeBin 15675 1
+CircuitBuildTimeBin 18375 1
+CircuitBuildTimeBin 19725 3
+CircuitBuildTimeBin 19775 1
+CircuitBuildTimeBin 19975 1
