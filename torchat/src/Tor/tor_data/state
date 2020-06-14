@@ -1,6 +1,106 @@
-# Tor state file last generated on 2020-06-05 17:51:06 local time
+# Tor state file last generated on 2020-06-14 17:55:35 local time
 # Other times below are in GMT
 # You *do not* need to edit this file.
 
+EntryGuard lpf1 D228AE265C966CA4E9A8C4B746A30A9737060A32
+EntryGuardDownSince 2020-06-14 10:59:56 2020-06-14 10:59:56
+EntryGuardUnlistedSince 2020-06-14 11:00:55
+EntryGuardAddedBy D228AE265C966CA4E9A8C4B746A30A9737060A32 0.2.2.39 2020-06-03 18:31:30
+EntryGuard hers 891FB8477529A6B2894B7A3129402E0FD5DD281F
+EntryGuardDownSince 2020-06-14 10:59:56 2020-06-14 10:59:56
+EntryGuardUnlistedSince 2020-06-14 11:00:55
+EntryGuardAddedBy 891FB8477529A6B2894B7A3129402E0FD5DD281F 0.2.2.39 2020-05-16 09:06:14
+EntryGuard sorrytorrey EAA088440B100FF8407266B5D4853FFB16A8CB67
+EntryGuardDownSince 2020-06-14 11:00:13 2020-06-14 11:00:13
+EntryGuardUnlistedSince 2020-06-14 11:00:55
+EntryGuardAddedBy EAA088440B100FF8407266B5D4853FFB16A8CB67 0.2.2.39 2020-05-25 01:12:37
+EntryGuard TorOrDie4privacyNET C7A016E1F85CF7DD73914AE40F55B7183D11B8FD
+EntryGuardDownSince 2020-06-14 11:00:13 2020-06-14 11:00:13
+EntryGuardUnlistedSince 2020-06-14 11:00:55
+EntryGuardAddedBy C7A016E1F85CF7DD73914AE40F55B7183D11B8FD 0.2.2.39 2020-05-19 03:37:10
+EntryGuard firstor2 9C900A7F6F5DD034CFFD192DAEC9CCAA813DB022
+EntryGuardAddedBy 9C900A7F6F5DD034CFFD192DAEC9CCAA813DB022 0.2.2.39 2020-06-09 02:13:57
+EntryGuard spechttor1 DBE82FA23B9FE3CB2462A6FCF5289DED3CBF4AEE
+EntryGuardDownSince 2020-06-14 14:55:35 2020-06-14 14:55:35
+EntryGuardAddedBy DBE82FA23B9FE3CB2462A6FCF5289DED3CBF4AEE 0.2.2.39 2020-05-27 03:53:24
+EntryGuard darkwizard BAF223E9DF62D3261F1675C6CFC4E5D50F15FA57
+EntryGuardAddedBy BAF223E9DF62D3261F1675C6CFC4E5D50F15FA57 0.2.2.39 2020-06-06 01:13:45
+EntryGuard viktortan FE1AF5E909002134BFF834F4AD5E1DE723779002
+EntryGuardAddedBy FE1AF5E909002134BFF834F4AD5E1DE723779002 0.2.2.39 2020-06-08 13:55:21
+EntryGuard BlackMesaAG BC123DB7F61E9DB31F23B37BF62A16DAA1010FC9
+EntryGuardAddedBy BC123DB7F61E9DB31F23B37BF62A16DAA1010FC9 0.2.2.39 2020-06-13 00:43:02
 TorVersion Tor 0.2.2.39 (git-bec76476efb71549)
-LastWritten 2020-06-05 15:51:06
+LastWritten 2020-06-14 15:55:35
+TotalBuildTimes 929
+CircuitBuildAbandonedCount 10
+CircuitBuildTimeBin 175 1
+CircuitBuildTimeBin 225 30
+CircuitBuildTimeBin 275 99
+CircuitBuildTimeBin 325 156
+CircuitBuildTimeBin 375 144
+CircuitBuildTimeBin 425 104
+CircuitBuildTimeBin 475 94
+CircuitBuildTimeBin 525 63
+CircuitBuildTimeBin 575 32
+CircuitBuildTimeBin 625 35
+CircuitBuildTimeBin 675 22
+CircuitBuildTimeBin 725 19
+CircuitBuildTimeBin 775 11
+CircuitBuildTimeBin 825 10
+CircuitBuildTimeBin 875 7
+CircuitBuildTimeBin 925 4
+CircuitBuildTimeBin 975 8
+CircuitBuildTimeBin 1025 5
+CircuitBuildTimeBin 1075 2
+CircuitBuildTimeBin 1125 3
+CircuitBuildTimeBin 1175 1
+CircuitBuildTimeBin 1225 3
+CircuitBuildTimeBin 1275 4
+CircuitBuildTimeBin 1325 2
+CircuitBuildTimeBin 1425 2
+CircuitBuildTimeBin 1475 2
+CircuitBuildTimeBin 1525 3
+CircuitBuildTimeBin 1575 1
+CircuitBuildTimeBin 1625 3
+CircuitBuildTimeBin 1675 2
+CircuitBuildTimeBin 1725 1
+CircuitBuildTimeBin 1775 3
+CircuitBuildTimeBin 1825 2
+CircuitBuildTimeBin 1875 1
+CircuitBuildTimeBin 1925 2
+CircuitBuildTimeBin 2025 1
+CircuitBuildTimeBin 2125 1
+CircuitBuildTimeBin 2175 1
+CircuitBuildTimeBin 2275 1
+CircuitBuildTimeBin 2625 1
+CircuitBuildTimeBin 2875 1
+CircuitBuildTimeBin 2975 1
+CircuitBuildTimeBin 3075 1
+CircuitBuildTimeBin 3175 1
+CircuitBuildTimeBin 3425 1
+CircuitBuildTimeBin 3675 1
+CircuitBuildTimeBin 4125 1
+CircuitBuildTimeBin 4525 1
+CircuitBuildTimeBin 4875 1
+CircuitBuildTimeBin 5925 1
+CircuitBuildTimeBin 6225 1
+CircuitBuildTimeBin 6475 1
+CircuitBuildTimeBin 8425 1
+CircuitBuildTimeBin 8725 1
+CircuitBuildTimeBin 12225 1
+CircuitBuildTimeBin 12275 1
+CircuitBuildTimeBin 12525 1
+CircuitBuildTimeBin 14175 1
+CircuitBuildTimeBin 15675 1
+CircuitBuildTimeBin 15875 1
+CircuitBuildTimeBin 17975 1
+CircuitBuildTimeBin 18075 1
+CircuitBuildTimeBin 18375 1
+CircuitBuildTimeBin 19725 3
+CircuitBuildTimeBin 19775 1
+CircuitBuildTimeBin 19975 1
+CircuitBuildTimeBin 26275 1
+CircuitBuildTimeBin 27075 1
+CircuitBuildTimeBin 28875 1
+CircuitBuildTimeBin 32975 1
+CircuitBuildTimeBin 34125 1

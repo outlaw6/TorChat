@@ -104,7 +104,7 @@ def isWindows98():
         return sys.getwindowsversion()[0] == 4 #@UndefinedVariable (make PyDev happy)
     else:
         return False
-        
+
 def isMac():
     return sys.platform == 'darwin'
 
@@ -115,13 +115,13 @@ def killProcess(pid):
             handle = ctypes.windll.kernel32.OpenProcess(PROCESS_TERMINATE, #@UndefinedVariable
                                                         False,
                                                         pid)
-            print handle
+            print(handle)
             ctypes.windll.kernel32.TerminateProcess(handle, -1) #@UndefinedVariable
             ctypes.windll.kernel32.CloseHandle(handle) #@UndefinedVariable
         else:
             os.kill(pid, 15)
     except:
-        print "(1) could not kill process %i" % pid
+        print ("(1) could not kill process %i") % pid
         tb()
 
 
@@ -180,7 +180,7 @@ def getDataDir():
         tor_exe =  "tor.exe"
     else:
         tor_exe = "tor.sh"
-    if not os.path.exists(data_dir_tor):
+    '''if not os.path.exists(data_dir_tor):
         os.mkdir(data_dir_tor)
         shutil.copy(os.path.join("Tor", tor_exe), data_dir_tor)
         shutil.copy(os.path.join("Tor", "torrc.txt"), data_dir_tor)
@@ -195,7 +195,7 @@ def getDataDir():
     os.chmod(os.path.join(data_dir_tor, tor_exe), 0700)
     os.chmod(os.path.join(data_dir_tor, "torrc.txt"), 0600)
 
-    cached_data_dir = data_dir
+    cached_data_dir = data_dir'''
     return data_dir
 
 def getProfileLongName():
@@ -238,7 +238,7 @@ def readConfig():
         try:
             header = f.read(3)
             if header == "\xef\xbb\xbf":
-                print "found UTF8 BOM in torchat.ini, removing it"
+                print( "found UTF8 BOM in torchat.ini, removing it")
                 f.seek(0)
                 f.write("\x20\x0d\x0a")
         except:
@@ -248,8 +248,8 @@ def readConfig():
     try:
         config.read(file_name)
     except ConfigParser.MissingSectionHeaderError:
-        print ""
-        print "*** torchat.ini must be saved as UTF-8 ***"
+        print ("")
+        print ("*** torchat.ini must be saved as UTF-8 ***")
         sys.exit()
 
     #try to read all known options once. This will add
@@ -259,7 +259,7 @@ def readConfig():
 
 def writeConfig():
     fp = open(file_name, "w")
-    os.chmod(file_name, 0600)
+    os.chmod(file_name)
     config.write(fp)
     fp.close()
 
@@ -275,8 +275,8 @@ def get(section, option):
             value = value.decode("UTF-8")
             value = value.rstrip(" \"'").lstrip(" \"'")
         except:
-            print "*** config file torchat.ini is not UTF-8 ***"
-            print "*** this will most likely break things   ***"
+            print ("*** config file torchat.ini is not UTF-8 ***")
+            print ("*** this will most likely break things   ***")
     elif type(value) == int:
         value = str(value)
     elif type(value) == float:
@@ -306,12 +306,12 @@ def set(section, option, value):
     writeConfig()
 
 def tb(level=0):
-    print "(%i) ----- start traceback -----\n%s   ----- end traceback -----\n" % (level, traceback.format_exc())
+    print ("(%i) ----- start traceback -----\n%s   ----- end traceback -----\n") % (level, traceback.format_exc())
 
 def tb1():
-    print "---- BEGIN DEBUG CALLSTACK"
+    print ("---- BEGIN DEBUG CALLSTACK")
     traceback.print_stack()
-    print "---- END DEBUG CALLSTACK"
+    print ("---- END DEBUG CALLSTACK")
 
 def getTranslators():
     translators = []
@@ -331,13 +331,13 @@ def getTranslators():
     return ", ".join(translators)
 
 def importLanguage():
-    """switch the language by redefining all the variables that will be 
+    """switch the language by redefining all the variables that will be
     available in the lang.* namespace, using the namespace __dict__
     and making use of the wonderful dynamic nature of the Python language"""
     # (The many undefinedvariable comments below are there to make
     # the code analysis of Eclipse-PyDev happy, which would not be able
     # to recognize that these are perfectly valid at *runtime*)
-     
+
     #if the strings in the language module have already been changed then
     if translations.lang_en.LANGUAGE_CODE != "en":
         #restore the original values from our backup to have
@@ -353,22 +353,22 @@ def importLanguage():
 
     if not SCRIPT_DIR in sys.path:
         #make sure that script dir is in sys.path (py2exe etc.)
-        print "(1) putting script directory into module search path"
+        print( "(1) putting script directory into module search path")
         sys.path.insert(0, SCRIPT_DIR)
 
     dict_std = translations.lang_en.__dict__ #@UndefinedVariable
-    print "(1) trying to import language module %s" % lang_xx
+    print ("(1) trying to import language module %s") % lang_xx
     try:
         #first we try to find a language module in the script dir
         dict_trans = __import__(lang_xx).__dict__
-        print "(1) found custom language module %s.py" % lang_xx
+        print ("(1) found custom language module %s.py") % lang_xx
     except:
         #nothing found, so we try the built in translations
         if lang_xx in translations.__dict__: #@UndefinedVariable
-            print "(1) found built in language module %s" % lang_xx
+            print ("(1) found built in language module %s") % lang_xx
             dict_trans = translations.__dict__[lang_xx].__dict__
         else:
-            print "(0) translation module %s not found"
+            print ("(0) translation module %s not found")
             dict_trans = None
 
     if dict_trans:
@@ -377,11 +377,11 @@ def importLanguage():
         #find missing translations and report them in the log
         for key in dict_std:
             if not key in dict_trans:
-                print "(2) %s is missing translation for %s" % (lang_xx, key)
+                print ("(2) %s is missing translation for %s") % (lang_xx, key)
         #replace the bindings in lang_en with those from lang_xx
         for key in dict_trans:
             if not key in dict_std:
-                print "(2) unused %s in %s" % (key, lang_xx)
+                print ("(2) unused %s in %s") % (key, lang_xx)
             else:
                 dict_std[key] = dict_trans[key]
 
@@ -402,33 +402,33 @@ class LogWriter:
         if  self.level and get("logging", "log_file"):
             try:
                 self.logfile = open(self.file_name, 'w')
-                os.chmod(self.file_name, 0600)
-                print "(0) started logging to file '%s'" % self.file_name
-                print "(0) logging to file might leave sensitive information on disk"
+                os.chmod(self.file_name)
+                print ("(0) started logging to file '%s'") % self.file_name
+                print ("(0) logging to file might leave sensitive information on disk")
             except:
                 self.logfile = None
-                print "(0) could not open logfile '%s'" % self.file_name
-                print "(0) logging only to stdout"
+                print ("(0) could not open logfile '%s'") % self.file_name
+                print ("(0) logging only to stdout")
 
         else:
             self.logfile = None
-            print "(1) logging to file is disabled"
-            
-        print "(1) current log level is %i" % self.level
-        print "(1) locale encoding is %s" % LOCALE_ENC
-        print "(1) console encoding is %s" % CONSOLE_ENC
-        print "(1) LogWriter initialized"
+            print ("(1) logging to file is disabled")
+
+        print( "(1) current log level is %i") % self.level
+        print( "(1) locale encoding is %s") % LOCALE_ENC
+        print( "(1) console encoding is %s") % CONSOLE_ENC
+        print ("(1) LogWriter initialized")
 
     def write(self, text):
         text = text.rstrip()
-        if text == "":        
+        if text == "":
             return
-            
+
         # If something prints a string that is not unicode then we simply
         # assume it is encoded in the encoding of the current locale.
         if isinstance(text, str):
             text = text.decode(self.encoding, 'replace')
-            
+
         text += "\n"
         try:
             x = text[0]
@@ -473,16 +473,16 @@ def main():
     os.chdir(SCRIPT_DIR)
     readConfig()
     log_writer = LogWriter()
-    
-    print "(0) python version %s" % sys.version.replace("\n", "").replace("\r", "")
+
+    print ("(0) python version %s") % sys.version.replace("\n", "").replace("\r", "")
 
     if isPortable():
-        print "(0) running in portable mode, all data is kept inside the bin folder."
+        print( "(0) running in portable mode, all data is kept inside the bin folder.")
         if (len(sys.argv) > 1):
-            print "(0) ignoring requested profile '%s' because profiles do not exist in portable mode" % toUnicode(sys.argv[1])
+            print ("(0) ignoring requested profile '%s' because profiles do not exist in portable mode") % toUnicode(sys.argv[1])
 
-    print "(0) script directory is %s" % SCRIPT_DIR
-    print "(0) data directory is %s" % getDataDir()
+    print ("(0) script directory is %s") % SCRIPT_DIR
+    print ("(0) data directory is %s") % getDataDir()
 
     #make a backup of all strings that are in the standard language file
     #because we could need them when switching between incomplete languages
