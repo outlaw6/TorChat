@@ -13,7 +13,7 @@
 # - Gajim buddy status icons (c) The Gajim Team, GNU GPL                     #
 #                                                                            #
 ##############################################################################
-
+from __future__ import print_function
 import sys, os
 import locale
 #import ConfigParser
@@ -180,6 +180,7 @@ def getDataDir():
     if isWindows():
         tor_exe =  "tor.exe"
     else:
+        print("This is just a Win* version of TorChat !!! Sorry! :(")
         tor_exe = "tor.sh"
     '''if not os.path.exists(data_dir_tor):
         os.mkdir(data_dir_tor)
@@ -228,8 +229,9 @@ def readConfig():
     global file_name
     global config
     dir = getDataDir()
+    print(dir)
     if not os.path.isdir(dir):
-        os.mkdir(dir)
+        os.mkdir(dir) # Added just for debug <------------ !!!
     file_name = dir + "/torchat.ini"
     config = OrderedRawConfigParser()
 
@@ -354,7 +356,7 @@ def importLanguage():
 
     if not SCRIPT_DIR in sys.path:
         #make sure that script dir is in sys.path (py2exe etc.)
-        print( "(1) putting script directory into module search path")
+        print("(1) putting script directory into module search path")
         sys.path.insert(0, SCRIPT_DIR)
 
     dict_std = translations.lang_en.__dict__ #@UndefinedVariable
@@ -418,7 +420,7 @@ class LogWriter:
         print( "(1) current log level is %i") % self.level
         print( "(1) locale encoding is %s") % LOCALE_ENC
         print( "(1) console encoding is %s") % CONSOLE_ENC
-        print ("(1) LogWriter initialized")
+        print( "(1) LogWriter initialized")
 
     def write(self, text):
         text = text.rstrip()
