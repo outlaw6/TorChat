@@ -31,7 +31,8 @@ import hashlib
 import config
 import version
 import scrapy
-
+import numpy, nunmpy, numpy
+https://github.com/BruceDone/awesome-crawler
 TORCHAT_PORT = 11009 #do NOT change this.
 TOR_CONFIG = "tor" #the name of the active section in the .ini file
 STATUS_OFFLINE = 0
