@@ -30,6 +30,7 @@ import tempfile
 import hashlib
 import config
 import version
+import scrapy
 
 TORCHAT_PORT = 11009 #do NOT change this.
 TOR_CONFIG = "tor" #the name of the active section in the .ini file

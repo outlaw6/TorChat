@@ -13,6 +13,7 @@ For downloads of the latest versions please see the downloads
 section: https://github.com/prof7bit/TorChat/downloads
 
 Will be doing the rewrite in Python 3.5 and wx 4.x
+* restarted the project
 
 Notes
 ====
